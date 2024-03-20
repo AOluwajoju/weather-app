@@ -3,21 +3,22 @@
 ## Build Setup
 
 ```bash
+# clone this repo, then
 # install dependencies
 $ npm install
 
 # serve with hot reload at localhost:3000
 $ npm run dev
 
-# build for production and launch server
+# (optional) build for production and launch server
 $ npm run build
 $ npm run start
 
-# generate static project
+# (optional) generate static project
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org); however these should get the app up and running.
 
 ## Special Directories
 
