@@ -31,49 +31,5 @@
 </template>
 
 <script>
-export default {
-  methods: {
-    detectLocation() {
-      // detect current location with geolocation
-      this.loading = true;
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const pos = {
-            lat: position.coords.latitude,
-            long: position.coords.longitude,
-          };
-
-          this.$store.dispatch("fetchDetectedLocationDetails", {
-            lon: pos.long,
-            lat: pos.lat,
-          });
-
-          this.loading = false;
-        },
-
-        (error) => {
-          // Error callback: Handle location error
-          this.loading = false;
-          if (error.code === error.PERMISSION_DENIED) {
-            this.message = "Access Denied. Please Allow to location detection.";
-          } else if (error.code === error.POSITION_UNAVAILABLE) {
-            this.message = "Location information is unavailable.";
-          } else if (error.code === error.TIMEOUT) {
-            this.message = "The request to get user location timed out.";
-          } else if (error.code === error.UNKNOWN_ERROR) {
-            this.message = "An unknown error occurred.";
-          } else {
-            console.log(error);
-            this.$router.push("/error?q=undefined");
-          }
-        }
-      );
-    },
-  },
-
-  // detect location once component is mounted
-  mounted() {
-    this.detectLocation();
-  },
-};
+export default {};
 </script>

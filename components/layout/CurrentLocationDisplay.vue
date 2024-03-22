@@ -76,6 +76,11 @@ export default {
       );
     },
   },
+
+  // detect location once component is mounted
+  mounted() {
+    this.detectLocation();
+  },
 };
 </script>
 
